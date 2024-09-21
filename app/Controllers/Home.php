@@ -1,20 +1,28 @@
-<?php
+<?php namespace App\Controllers;
 
-namespace App\Controllers;
+use App\Models\Answers_model;
 
 class Home extends BaseController
 {
-    public function index(): string
-    {
-        return view('about');
-    }
+    public function index() {
+        
+        echo view('Sections/header');
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $score = $this->getScore();
 
-    public function login() {
-        return view('login');
+            $data=['score' => $score];
+            echo view('test-view', $data);
+        } else {
+            echo view('Home/index');
+        }
+        echo view('Sections/footer');
     }
-
-    public function test() {
-        return view('test-page');
+    
+    public function getScore() {
+        $uAnswers = $_POST;
+        $answersModel = new Answers_model;
+        $score = $answersModel->checkAnswers($uAnswers);
+        // $data = ['score' => $score];
+        return $score;
     }
-
 }
