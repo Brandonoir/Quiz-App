@@ -1,5 +1,5 @@
     <h3>Answer the following questions</h3>
-    <form action="" method="POST">
+    <form action="answers" method="POST">
         <fieldset>
             <legend>Test 1</legend>
             <label for="t1-q1">Q1: <input type="text" name="t1-q1" /></label>
@@ -11,18 +11,18 @@
         <fieldset>
             <legend>Test 2</legend>
             <label for="t2-q1">Q1: 
-                <p><input name="t2-q1" type="radio" value="item-1" />True</p>
-                <p><input name="t2-q1" type="radio" value="item-2" />False</p>
+                <p><input name="t2-q1" type="radio" value="true" />True</p>
+                <p><input name="t2-q1" type="radio" value="false" />False</p>
             </label>
             <br>
             <label for="t2-q2">Q2:
-                <p><input name="t2-q2" type="radio" value="item-1" />True</p>
-                <p><input name="t2-q2" type="radio" value="item-2" />False</p>
+                <p><input name="t2-q2" type="radio" value="true" />True</p>
+                <p><input name="t2-q2" type="radio" value="false" />False</p>
             </label>
             <br>
             <label for="t2-q3">Q3: 
-                <p><input name="t2-q3" type="radio" value="item-1" />True</p>
-                <p><input name="t2-q3" type="radio" value="item-2" />False</p>
+                <p><input name="t2-q3" type="radio" value="true" />True</p>
+                <p><input name="t2-q3" type="radio" value="false" />False</p>
             </label>
         </fieldset>
         <fieldset>
