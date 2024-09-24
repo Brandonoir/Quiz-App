@@ -8,3 +8,4 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 $routes->post('score', 'Score::index');
 $routes->get('answers', 'Answers::index');
+$routes->get('create-test', 'CreateTest::index');
