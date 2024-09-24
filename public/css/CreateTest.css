@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+:root{
+    --font-size-s: 1em;
+    --font-size-m: 1.35em;
+}
+
+
+.questionnaire{
+    background-color: antiquewhite;
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+    padding: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+textarea{
+    padding: 10px;
+    resize: none;
+    font-size: var(--font-size-s);
+}
+
+fieldset{
+    display: block;
+    font-size: var(--font-size-m);
+    background-color: white;
+    text-align: left;
+}
