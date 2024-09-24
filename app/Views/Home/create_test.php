@@ -1,5 +1,4 @@
 <div class="questionnaire">
-    <?= $questionText; ?>
 
     <h1>Create Test Form</h1>
         <div>
