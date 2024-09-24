@@ -8,7 +8,7 @@
                 </tr>
             </table>
         </div>
-    <form action="create-test" method="post">
+    <form action="get-question" method="post">
         <div class="question">
             <fieldset>
                 <legend>Question</legend>
@@ -20,7 +20,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <select name="answer-type" class="answer-type" >
+                            <select name="answer-type" class="answer-type" required>
                                 <option value="" disabled selected>Select answer type</option>
                                 <option value="radio">radio</option>
                                 <option value="checkbox">checkbox</option>
@@ -53,7 +53,7 @@
                 <legend>Checkbox/Multiple Answer</legend>
                 <table>
                     <tr>
-                        <td><input type="checkbox"></td>
+                        <td><input type="checkbox" ></td>
                         <td><input type="text"></td>
                     </tr>
                     <tr>

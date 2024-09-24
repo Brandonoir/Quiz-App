@@ -6,6 +6,9 @@
     --font-size-m: 1.35em;
 }
 
+select {
+    height: 20px;
+}
 
 .questionnaire{
     background-color: antiquewhite;
