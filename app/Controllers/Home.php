@@ -6,9 +6,11 @@ class Home extends BaseController
 {
     public function index() {
         
-        echo view('Sections/header');
+        // echo view('Sections/header');
+        // echo view('Home/index');
+        // echo view('Sections/footer');
+
         echo view('Home/index');
-        echo view('Sections/footer');
     }
     
     // public function getScore() {

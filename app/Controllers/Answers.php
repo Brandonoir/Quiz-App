@@ -12,7 +12,12 @@ class Answers extends BaseController
         $score = $this->checkAnswers($uAnswers);
         $scoreLog = $this->scoreLog;
 
-        $data =['answers' => $answers, 'uAnswers' => $uAnswers, 'score' => $score, 'scoreLog' => $scoreLog];
+        $data =[
+            'answers' => $answers, 
+            'uAnswers' => $uAnswers, 
+            'score' => $score, 
+            'scoreLog' => $scoreLog
+        ];
         echo view('Sections/header');
         echo view('test-view',$data);
         echo view('Sections/footer');

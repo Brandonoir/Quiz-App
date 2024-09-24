@@ -49,4 +49,5 @@
             </label>
         </fieldset>
         <input type="submit" value="Submit" />
+        <a href="create-test">Create post</a>
     </form>
