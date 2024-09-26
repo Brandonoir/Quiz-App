@@ -1,13 +1,34 @@
 <?php namespace App\Controllers;
 
-// use App\Models\Answers_model;
+use App\Models\TestModel;
 
 class Home extends BaseController
 {
     public function index() {
-        
-        echo view('Sections/header');
-        echo view('Home/index');
+        $data = [
+            'css' => 'css/Home.css'
+        ];
+
+        echo view('Sections/header', $data);
+        echo view('Home/admin');
+        echo view('Sections/footer');
+    }
+
+    public function saveTest(){
+        $testModel = new TestModel();
+        $testData = [
+            'test_title' => $this->request->getPost('test-title'),
+            'description' => $this->request->getPost('test-description')
+        ];
+        $testModel->save($testData);
+        $testId = $testModel->where('test_title', $this->request->getPost('test-title'))->first()['id'];
+
+        $data = [
+            'css' => 'css/Home.css'
+        ];
+
+        echo view('Sections/header', $data);
+        echo view('Home/test-saved');
         echo view('Sections/footer');
     }
 }
