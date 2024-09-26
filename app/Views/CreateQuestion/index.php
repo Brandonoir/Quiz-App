@@ -1,5 +1,5 @@
 <div class="questionnaire">
-    <h1>Create Test Form</h1>
+    <h1><?= $testTitle ?> Form</h1>
         <div>
             <table>
                 <tr>

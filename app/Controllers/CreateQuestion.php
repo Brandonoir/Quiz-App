@@ -3,13 +3,20 @@
 use App\Models\QuestionModel;
 
 class CreateQuestion extends BaseController {
+    private $testTitle;
+    private $testId;
+
     public function index() {
+        $this->testTitle = $this->request->getPost('test-title');
+        $this->testId = $this->request->getPost('testId');
+
         $data = [
-            'css' => 'css/CreateQuestion.css'
+            'css' => 'css/CreateQuestion.css',
+            'testTitle' => $this->testTitle
         ];
 
         echo view('Sections/header', $data);
-        echo view('CreateQuestion/index');
+        echo view('CreateQuestion/index', $data);
         echo view('Sections/footer');
     }
 

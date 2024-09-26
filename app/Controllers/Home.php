@@ -24,11 +24,13 @@ class Home extends BaseController
         $testId = $testModel->where('test_title', $this->request->getPost('test-title'))->first()['id'];
 
         $data = [
-            'css' => 'css/Home.css'
+            'css' => 'css/Home.css',
+            'testId' => $testId,
+            'testTitle' => $testData['test_title']
         ];
 
         echo view('Sections/header', $data);
-        echo view('Home/test-saved');
+        echo view('Home/test-saved', $data);
         echo view('Sections/footer');
     }
 }
