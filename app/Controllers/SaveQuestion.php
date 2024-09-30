@@ -5,8 +5,8 @@ use App\Models\QuestionModel;
 class SaveQuestion extends BaseController {
 
     public function index(){
-        $testTitle = $_POST['testTitle'];
-        $testId = $_POST['testId'];
+        $testTitle = $this->request->getPost('testTitle');
+        $testId = $this->request->getPost('testId');
 
         $answer = $this->request->getPost('answer');
         $correct_answer = $this->request->getPost('correct_answer');
@@ -29,10 +29,6 @@ class SaveQuestion extends BaseController {
 
         $questionModel->insert($questionData);
 
-        $data = [
-            'css' => 'css/CreateQuestion.css',
-        ];
-
-        return redirect()->back();
+        return redirect()->to('/create-question');
     }
 }

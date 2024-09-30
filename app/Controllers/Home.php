@@ -16,6 +16,7 @@ class Home extends BaseController
     }
 
     public function saveTest(){
+        $session = session();
         $testModel = new TestModel();
         $testData = [
             'test_title' => $this->request->getPost('test-title'),
@@ -24,14 +25,15 @@ class Home extends BaseController
         $testModel->save($testData);
         $testId = $testModel->where('test_title', $this->request->getPost('test-title'))->first()['id'];
 
+        $session->set('testTitle' , $testData['test_title']);
+        $session->set('testId' , $testId);
+
         $data = [
             'css' => 'css/Home.css',
             'testId' => $testId,
             'testTitle' => $testData['test_title']
         ];
 
-        echo view('Sections/header', $data);
-        echo view('Home/test-saved', $data);
-        echo view('Sections/footer');
+        return redirect()->to('/create-question');
     }
 }
