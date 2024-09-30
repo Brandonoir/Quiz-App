@@ -33,4 +33,14 @@ class QuestionModel extends Model
     protected $updatedField  = 'updated_at';
     protected $deletedField  = 'deleted_at';
 
+    // Validation
+    protected $validationRules = [
+        'question_text' => 'required',
+        'answer_type' => 'required',
+        'answer' => 'required',
+        'correct_answer' => 'required'
+    ];
+    protected $validationMessages   = [];
+    protected $skipValidation       = false;
+    protected $cleanValidationRules = true;
 }

@@ -1,0 +1,104 @@
+:root{
+    --color-1: #001F3F;
+    --color-2: #3A6D8C;
+    --color-3: #6A9AB0;
+    --color-4: #EAD8B1;
+    --color-5: #F9F7F7;
+}
+
+*{
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    padding: 0%;
+    margin: 0%;
+    color: var(--color-1);
+}
+
+.header{
+    background-color: var(--color-1);
+    height: 15vh;
+}
+
+.content{
+    display: flex;
+}
+
+.nav{
+    border-top: 3px solid var(--color-3);
+    border-bottom: 3px solid var(--color-3);
+    background-color: var(--color-2);
+    height: 75vh;
+    width: 20vw;
+}
+
+.dashboard{
+    overflow-y: hidden;
+    width: 80%;
+    height: 75vh;
+    padding: 15px 30px;
+    background-color: var(--color-4);
+}
+
+.dashboard > h1 {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+fieldset{
+    margin-top: 15px;
+    height: 75px;
+    align-content: center;
+}
+
+fieldset > form {
+    height: 35px;
+}
+
+input {
+    height: 30px;
+}
+
+#create-test, #savebtn{
+    background-color: var(--color-3);
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+}
+
+#create-test:hover, #savebtn:hover{
+    background-color: var(--color-2);
+}
+
+.test-list{
+    margin-top: 15px;
+    overflow-y: scroll;
+    height: 54vh;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.test{
+    color: var(--color-5);
+    background-color: var(--color-1);
+    border-radius: 7px;
+    margin: 10px 0;
+    padding-top: 5px;
+    min-height: 80px;
+    max-height: 110px;
+}
+
+.test h2{
+    margin: 0 0 0 20px;
+}
+
+.test p{
+    margin: 5px 0 0 20px;
+}
+
+footer{
+    background-color: var(--color-1);
+    height: 10vh;
+}

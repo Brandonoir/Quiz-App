@@ -5,8 +5,8 @@ use App\Models\QuestionModel;
 class SaveQuestion extends BaseController {
 
     public function index(){
-        $testTitle = $this->request->getPost('testTitle');
-        $testId = $this->request->getPost('testId');
+        $session = session();
+        $testId = $session->get('testId');
 
         $answer = $this->request->getPost('answer');
         $correct_answer = $this->request->getPost('correct_answer');
@@ -20,7 +20,7 @@ class SaveQuestion extends BaseController {
 
         $questionModel = new QuestionModel();
         $questionData = [
-            'test_id' => $this->request->getPost('testId'),
+            'test_id' => $testId,
             'question_text' => $this->request->getPost('question-text'),
             'answer_type' => $this->request->getPost('answer-type'),
             'answer' => $answer,
@@ -28,7 +28,6 @@ class SaveQuestion extends BaseController {
         ];
 
         $questionModel->insert($questionData);
-
         return redirect()->to('/create-question');
     }
 }
