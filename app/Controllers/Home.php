@@ -1,6 +1,7 @@
 <?php namespace App\Controllers;
 
 use App\Models\TestModel;
+use Config\Services;
 
 class Home extends BaseController
 {

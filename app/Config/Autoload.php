@@ -91,4 +91,11 @@ class Autoload extends AutoloadConfig
      * @var list<string>
      */
     public $helpers = [];
+
+    public $autoload = array(
+        'libraries' => array('session'),
+        'helpers' => array(),
+        'models' => array(),
+        'drivers' => array(),
+    );
 }

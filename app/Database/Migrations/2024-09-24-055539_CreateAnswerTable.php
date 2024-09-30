@@ -20,7 +20,7 @@ class CreateAnswersTable extends Migration
                 'constraint' => 11,
                 'unsigned' => true,
             ],
-            'answer_text' => [
+            'answer' => [
                 'type' => 'TEXT',
             ],
             'created_at' => [

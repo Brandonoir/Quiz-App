@@ -17,7 +17,8 @@ class AnswerModel extends Model
     protected $allowedFields = [
         'id',
         'question_id',
-        'answer_text',
+        'answer',
+        'correct_answer'
     ];
 
     protected bool $allowEmptyInserts = false;

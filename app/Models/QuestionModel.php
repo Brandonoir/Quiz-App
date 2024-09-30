@@ -11,12 +11,20 @@ class QuestionModel extends Model
 
     protected $useAutoIncrement = true;
 
+    protected $returnType     = 'array';
+    protected $useSoftDeletes = true;
+
     protected $allowedFields = [
         'id',
         'test_id',
         'question_text',
-        'answer_type'
+        'answer_type',
+        'answer',
+        'correct_answer'
     ];
+
+    protected bool $allowEmptyInserts = false;
+    protected bool $updateOnlyChanged = true;
 
     // Dates
     protected $useTimestamps = true;

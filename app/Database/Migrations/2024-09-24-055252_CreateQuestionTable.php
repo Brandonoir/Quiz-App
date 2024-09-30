@@ -27,6 +27,14 @@ class CreateQuestionTable extends Migration
                 'type' => 'VARCHAR',
                 'constraint' => '255',
             ],
+            'answer' => [
+                'type' => 'VARCHAR',
+                'constraint' => '255',
+            ],
+            'correct_answer' => [
+                'type' => 'VARCHAR',
+                'constraint' => '255',
+            ],
             'created_at' => [
                 'type' => 'DATETIME',
                 'null' => true,
